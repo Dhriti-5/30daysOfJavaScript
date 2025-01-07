@@ -1,0 +1,33 @@
+html{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/257/230/original/vector-abstract-shiny-blue-polygon-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ .Clock{
+    width : 30rem;
+    height : 30rem;
+    border: 20px solid white;
+    border-radius: 50%; 
+    position : relative;
+    margin : 50px auto;
+    padding : 10px;
+    box-shadow: 
+    0 0 0 4px rgb(0 0 0 / 0%), inset 0 0 0 3px #efefeff7, inset 0 0 10px #000000, 0 0 10px #F3E5F5;
+}
+.Clock-face{
+   position: relative;
+   width : 100%;
+   height : 100%;
+} 
+.Hand{
+    width: 50%;
+    height: 6px;
+    background: rgb(63, 61, 61);
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transform-origin: right; 
+    transition-timing-function: cubic-bezier(0.25, 0.03, 0, 2);
+}
