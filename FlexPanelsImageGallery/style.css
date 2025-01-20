@@ -1,0 +1,75 @@
+ html {
+    box-sizing: border-box;
+}
+.panels {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+} 
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), 
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+    background :0.2s;
+    font-size: large;
+    text-shadow: 2px 2px rgb(126, 125, 125);
+    color: rgb(255, 252, 252);
+    background-size: cover;
+    background-position: center;
+} 
+.panel1 {
+    background-image: url(https://cdn.wallpapersafari.com/74/34/ScKLj1.jpg);
+}
+
+.panel2 {
+    background-image: url(https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.panel3 {
+    background-image: url(https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.panel4 {
+    background-image: url(https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.panel5 {
+    background-image: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.panel>* {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 0 auto;
+} 
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+}
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 1em;
+  }
+
+  .panel p:nth-child(2) {
+    font-size: 2em;
+  }
