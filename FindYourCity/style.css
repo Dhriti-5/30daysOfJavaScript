@@ -1,0 +1,35 @@
+.search-form {
+    background-color: rgb(205, 199, 16);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.suggestions {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions li {
+    background-color: white;
+    width: 300px;
+    height: 40px;
+    color: darkblue;
+    border: 1px solid black;
+    box-shadow: inset 4px 5px 10px #888888;
+}
+
+input.search {
+    margin-left: 30px;
+    background-color: white;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.suggestions li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+}
+
+.suggestions li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
