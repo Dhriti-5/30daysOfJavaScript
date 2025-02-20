@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konami Code</title>
+</head>
+<body>
+    <script>
+        const secretcode = "dhriti";
+        const passed = [];
+        window.addEventListener("keyup",(e)=>{
+         console.log(e.key);
+        passed.push(e.key);
+        passed.splice(-secretcode.length-1,passed.length-secretcode.length);
+        if(passed.join("").includes(secretcode)){
+            console.log('Ding Ding');
+            document.body.innerHTML += "😊";
+        }
+        });
+    </script>
+</body>
+</html>
