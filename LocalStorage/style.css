@@ -1,0 +1,70 @@
+body {
+    background-image: url("https://th.bing.com/th/id/OIP.bSeG5S4nbp1cXgNNeqp03gHaE8?w=5760&h=3840&rs=1&pid=ImgDetMain");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center; 
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper{
+    box-sizing: border-box;
+    width: 385px;
+    height: 424px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 403px;
+    padding: 100px;
+    margin-top: 100px;
+  }
+  .plates {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+  }
+  
+  .plates li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+  }
+  
+  .plates label {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .plates input {
+    display: none;
+  }
+  
+  .plates input + label:before {
+    content: "⬜️";
+    margin-right: 10px;
+  }
+  
+  .plates input:checked + label:before {
+    content: "🌮";
+  }
+  .add-items {
+    display: flex;
+    align-items: center;
+    margin: 175px -44px;
+    gap: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+  .add-items input[type="text"] {
+    height: 29px;
+    flex: 1;
+    max-width: 148px;
+    margin-left: 13px;
+}
+  .add-items input[type="submit"] {
+    height: 33px;
+    flex: none;
+    width: 109px;
+  }
