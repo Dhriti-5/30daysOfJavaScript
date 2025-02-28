@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Band Names Without Articles</title>
+</head>
+<body>
+    <style>
+          body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url("https://2.bp.blogspot.com/-5GLjxtdFX6g/XGso06tYYLI/AAAAAAAACns/8CMHDqGz_Cge1KxSLfZ4wRMuAvSCjkdsgCKgBGAs/w4096-h2304-p-k-no-nu/mountain-colorful-forest-nature-sunset-scenery-4K-161.jpg");
+      background-size:cover;
+      display: flex;
+      align-items: center;
+    }
+    #bands{
+      list-style: inside square;
+      font-size: 20px;
+      background: white;
+      width: 500px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+      min-height: 100vh;
+    }
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 20px;
+    }
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      color: #ffc600;
+      text-decoration: none;
+    }
+    </style>
+    <ul id="bands"></ul>
+
+    <script>
+    const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+    function strip(bandName){
+        return bandName.replace(/^(a |an |the )/i,'').trim();
+    }
+
+    const sortedBands = bands.sort((a,b)=>strip(a)>strip(b)?1:-1);
+    document.querySelector('#bands').innerHTML = 
+      sortedBands.map(band=>`<li>${band}</li>`)
+      .join('');
+
+    console.log(sortedBands);
+    </script>
+</body>
+</html>
